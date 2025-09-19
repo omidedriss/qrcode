@@ -1,0 +1,600 @@
+/* Responsive text ellipsis */
+.ellipsisStatic {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 110px;
+}
+
+.ellipsisDynamic {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 79px;
+}
+
+/* Mobile responsive ellipsis */
+@media (max-width: 768px) {
+  .ellipsisStatic {
+    max-width: 90px;
+  }
+
+  .ellipsisDynamic {
+    max-width: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ellipsisStatic {
+    max-width: 70px;
+  }
+
+  .ellipsisDynamic {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 360px) {
+  .ellipsisStatic {
+    max-width: 60px;
+  }
+
+  .ellipsisDynamic {
+    max-width: 40px;
+  }
+}
+
+/* RTL/LTR Support */
+[dir="rtl"] .v-text-field,
+[dir="rtl"] .v-textarea,
+[dir="rtl"] .v-select,
+[dir="rtl"] .v-autocomplete {
+  direction: rtl !important;
+  text-align: right !important;
+  border-radius: 5px;
+}
+
+[dir="rtl"] .v-text-field .v-label,
+[dir="rtl"] .v-textarea .v-label,
+[dir="rtl"] .v-select .v-label {
+  left: auto !important;
+  right: 12px !important;
+  text-align: right !important;
+  transform-origin: top right !important;
+}
+
+[dir="rtl"] .v-text-field--outlined>.v-input__control>.v-input__slot,
+[dir="rtl"] .v-textarea--outlined>.v-input__control>.v-input__slot,
+[dir="rtl"] .v-select--outlined>.v-input__control>.v-input__slot {
+  direction: rtl !important;
+}
+
+[dir="rtl"] .v-text-field--outlined fieldset,
+[dir="rtl"] .v-textarea--outlined fieldset,
+[dir="rtl"] .v-select--outlined fieldset {
+  left: auto !important;
+  right: 0 !important;
+  width: 100% !important;
+}
+
+[dir="rtl"] .v-text-field--outlined legend,
+[dir="rtl"] .v-textarea--outlined legend,
+[dir="rtl"] .v-select--outlined legend {
+  text-align: right !important;
+  margin-right: 12px !important;
+  margin-left: auto !important;
+}
+
+[dir="rtl"] .v-text-field .v-input__prepend-inner,
+[dir="rtl"] .v-textarea .v-input__prepend-inner,
+[dir="rtl"] .v-select .v-input__prepend-inner {
+  margin-left: 8px !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .v-text-field .v-input__append-inner,
+[dir="rtl"] .v-textarea .v-input__append-inner,
+[dir="rtl"] .v-select .v-input__append-inner {
+  margin-right: 8px !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .v-textarea textarea {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* LTR Support */
+[dir="ltr"] .v-text-field,
+[dir="ltr"] .v-textarea,
+[dir="ltr"] .v-select,
+[dir="ltr"] .v-autocomplete {
+  direction: ltr !important;
+  text-align: left !important;
+  border-radius: 5px;
+}
+
+[dir="ltr"] .v-text-field .v-label,
+[dir="ltr"] .v-textarea .v-label,
+[dir="ltr"] .v-select .v-label {
+  left: 12px !important;
+  right: auto !important;
+  text-align: left !important;
+  transform-origin: top left !important;
+}
+
+[dir="ltr"] .v-text-field--outlined>.v-input__control>.v-input__slot,
+[dir="ltr"] .v-textarea--outlined>.v-input__control>.v-input__slot,
+[dir="ltr"] .v-select--outlined>.v-input__control>.v-input__slot {
+  direction: ltr !important;
+}
+
+[dir="ltr"] .v-text-field--outlined fieldset,
+[dir="ltr"] .v-textarea--outlined fieldset,
+[dir="ltr"] .v-select--outlined fieldset {
+  left: 0 !important;
+  right: auto !important;
+  width: 100% !important;
+}
+
+[dir="ltr"] .v-text-field--outlined legend,
+[dir="ltr"] .v-textarea--outlined legend,
+[dir="ltr"] .v-select--outlined legend {
+  text-align: left !important;
+  margin-left: 12px !important;
+  margin-right: auto !important;
+}
+
+[dir="ltr"] .v-text-field .v-input__prepend-inner,
+[dir="ltr"] .v-textarea .v-input__prepend-inner,
+[dir="ltr"] .v-select .v-input__prepend-inner {
+  margin-right: 8px !important;
+  margin-left: 0 !important;
+}
+
+[dir="ltr"] .v-text-field .v-input__append-inner,
+[dir="ltr"] .v-textarea .v-input__append-inner,
+[dir="ltr"] .v-select .v-input__append-inner {
+  margin-left: 8px !important;
+  margin-right: 0 !important;
+}
+
+[dir="ltr"] .v-textarea textarea {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Special fields that should always be LTR */
+.v-text-field.phone-field,
+.v-text-field.link-field,
+.v-select.country-code {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.v-text-field.phone-field .v-label,
+.v-text-field.link-field .v-label,
+.v-select.country-code .v-label {
+  left: 12px !important;
+  right: auto !important;
+  text-align: left !important;
+  transform-origin: top left !important;
+}
+
+.v-text-field.phone-field>.v-input__control>.v-input__slot,
+.v-text-field.link-field>.v-input__control>.v-input__slot,
+.v-select.country-code>.v-input__control>.v-input__slot {
+  direction: ltr !important;
+}
+
+.v-text-field.phone-field fieldset,
+.v-text-field.link-field fieldset,
+.v-select.country-code fieldset {
+  left: 0 !important;
+  right: auto !important;
+  width: 100% !important;
+}
+
+.v-text-field.phone-field legend,
+.v-text-field.link-field legend,
+.v-select.country-code legend {
+  text-align: left !important;
+  margin-left: 12px !important;
+  margin-right: auto !important;
+}
+
+/* Switch styling */
+:deep(.v-input--switch .v-input--selection-controls__input) {
+  flex-direction: row;
+  text-align: right;
+  display: flex;
+}
+
+[dir="ltr"] :deep(.v-input--switch .v-input--selection-controls__input) {
+  flex-direction: row;
+  text-align: left;
+}
+
+.rtl-switch .v-input__control {
+  justify-content: end;
+  display: flex;
+}
+
+[dir="ltr"] .rtl-switch .v-input__control {
+  justify-content: start;
+}
+
+.rtl-switch {
+  display: flex;
+  justify-content: end;
+}
+
+[dir="ltr"] .rtl-switch {
+  justify-content: start;
+}
+
+/* Tag styling */
+.tag {
+  text-align: right;
+  justify-self: end;
+  font-size: 32px;
+  color: #413199 !important;
+  margin: 8px;
+  margin-bottom: 20px !important;
+  /* margin: 20px;
+  margin-bottom: 40px !important; */
+}
+
+[dir="ltr"] .tag {
+  text-align: left;
+  justify-self: start;
+}
+
+/* Responsive tag sizing */
+@media (max-width: 768px) {
+  .tag {
+    font-size: 28px;
+    margin: 8px;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tag {
+    font-size: 24px;
+    margin: 8px;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .tag {
+    font-size: 20px;
+    margin: 8px;
+    margin-bottom: 20px !important;
+  }
+}
+
+.rtl-label {
+  color: #403199;
+  text-align: left;
+  font-size: 14pt;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-start;
+  justify-self: flex-start;
+}
+
+[dir="rtl"].rtl-label {
+  color: #403199;
+  text-align: right;
+  font-size: 14pt;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-end;
+  justify-self: flex-end;
+}
+
+
+:deep(.v-switch) {
+  color: #403199 !important;
+}
+
+.rtl-container {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="ltr"] .rtl-container {
+  direction: ltr;
+  text-align: left;
+}
+
+/* کاهش فاصله‌ها در حالت موبایل و تبلت زمانی که منو پایینی فعال است */
+@media (max-width: 768px) {
+
+  /* کاهش فاصله بین تب و محتوای آن */
+  .v-tabs-items {
+    margin-top: 10px !important;
+    padding-top: 5px !important;
+  }
+
+  /* کاهش فاصله بین عنوان و فرم */
+  .tag {
+    margin-bottom: 10px !important;
+    margin-top: 5px !important;
+  }
+
+  /* کاهش فاصله بین فرم و کادر پیش‌نمایش */
+  .v-form {
+    margin-bottom: 10px !important;
+  }
+
+  /* کاهش فاصله بین فیلدهای فرم */
+  .v-text-field,
+  .v-textarea,
+  .v-select {
+    margin-bottom: 8px !important;
+  }
+
+  /* کاهش padding داخلی container */
+  .v-container {
+    padding: 8px !important;
+  }
+
+  /* کاهش فاصله بین ردیف‌ها */
+  .v-row {
+    margin: 0 !important;
+  }
+
+  .v-col {
+    padding: 4px !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* کاهش بیشتر فاصله‌ها در موبایل کوچک */
+  .tag {
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+    margin-top: 3px !important;
+  }
+
+  .v-tabs-items {
+    margin-top: 8px !important;
+    padding-top: 3px !important;
+  }
+
+  .v-container {
+    padding: 6px !important;
+  }
+
+  .v-text-field,
+  .v-textarea,
+  .v-select {
+    margin-bottom: 6px !important;
+  }
+
+  .v-col {
+    padding: 2px !important;
+  }
+}
+
+/* کاهش فاصله زمانی که منو پایینی فعال است */
+@media (max-width: 768px) {
+
+  /* کاهش فاصله بین تب‌ها و محتوای آنها */
+  .nav-container {
+    margin-bottom: 10px !important;
+  }
+
+  /* کاهش فاصله بین تب و محتوای آن */
+  .v-tab-item {
+    padding-top: 5px !important;
+    margin-top: 5px !important;
+  }
+
+  /* کاهش فاصله بین عناصر داخل تب */
+  .v-container>* {
+    margin-bottom: 8px !important;
+  }
+
+  /* کاهش فاصله بین عنوان و فیلد */
+  .rtl-label.tag+.v-form {
+    margin-top: 5px !important;
+  }
+
+  /* کاهش فاصله بین فیلد و کادر پیش‌نمایش */
+  .v-form+* {
+    margin-top: 8px !important;
+  }
+}
+
+/* تنظیمات خاص برای حالت تبلت */
+@media (min-width: 481px) and (max-width: 768px) {
+  .tag {
+    margin-bottom: 15px !important;
+    margin-top: 8px !important;
+  }
+
+  .v-tabs-items {
+    margin-top: 12px !important;
+    padding-top: 8px !important;
+  }
+
+  .v-container {
+    padding: 10px !important;
+  }
+
+  .v-text-field,
+  .v-textarea,
+  .v-select {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* تنظیمات پس زمینه‌های ترانسپرنت برای همه جاها */
+.qrcdr-container {
+  background-color: v-bind("settings.backgroundSettings.mainBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.mainBackground.image ? `url(${settings.backgroundSettings.mainBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* پس زمینه container اصلی */
+.v-container {
+  background-color: v-bind("settings.backgroundSettings.containerBackground.transparent ? 'transparent' : settings.backgroundSettings.containerBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.containerBackground.image ? `url(${settings.backgroundSettings.containerBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* پس زمینه تب‌ها */
+.v-tabs {
+  background-color: v-bind("settings.backgroundSettings.tabsBackground.transparent ? 'transparent' : settings.backgroundSettings.tabsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.tabsBackground.image ? `url(${settings.backgroundSettings.tabsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* پس زمینه پنل‌ها */
+.v-sheet,
+.v-card,
+.v-expansion-panels {
+  background-color: v-bind("settings.backgroundSettings.panelsBackground.transparent ? 'transparent' : settings.backgroundSettings.panelsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.panelsBackground.image ? `url(${settings.backgroundSettings.panelsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* پس زمینه فرم‌ها */
+.v-form {
+  background-color: v-bind("settings.backgroundSettings.formsBackground.transparent ? 'transparent' : settings.backgroundSettings.formsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.formsBackground.image ? `url(${settings.backgroundSettings.formsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* پس زمینه کادرهای پیش‌نمایش */
+.preview-panel,
+.qr-preview,
+.preview-container {
+  background-color: v-bind("settings.backgroundSettings.previewBackground.transparent ? 'transparent' : settings.backgroundSettings.previewBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.previewBackground.image ? `url(${settings.backgroundSettings.previewBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* پس زمینه منوها */
+.menu,
+.navigation,
+.navigationTop,
+.navigationBottom {
+  background-color: v-bind("settings.backgroundSettings.menuBackground.transparent ? 'transparent' : settings.backgroundSettings.menuBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.menuBackground.image ? `url(${settings.backgroundSettings.menuBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* پس زمینه دکمه‌ها */
+.v-btn {
+  background-color: v-bind("settings.backgroundSettings.buttonBackground.transparent ? 'transparent' : settings.backgroundSettings.buttonBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.buttonBackground.image ? `url(${settings.backgroundSettings.buttonBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* تنظیمات خاص برای کامپوننت‌های مختلف */
+/* ColorsPanel */
+.colors-panel {
+  background-color: v-bind("settings.backgroundSettings.panelsBackground.transparent ? 'transparent' : settings.backgroundSettings.panelsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.panelsBackground.image ? `url(${settings.backgroundSettings.panelsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* LogoPanel */
+.logo-panel {
+  background-color: v-bind("settings.backgroundSettings.panelsBackground.transparent ? 'transparent' : settings.backgroundSettings.panelsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.panelsBackground.image ? `url(${settings.backgroundSettings.panelsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* FramePanel */
+.frame-panel {
+  background-color: v-bind("settings.backgroundSettings.panelsBackground.transparent ? 'transparent' : settings.backgroundSettings.panelsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.panelsBackground.image ? `url(${settings.backgroundSettings.panelsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* OptionsPanel */
+.options-panel {
+  background-color: v-bind("settings.backgroundSettings.panelsBackground.transparent ? 'transparent' : settings.backgroundSettings.panelsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.panelsBackground.image ? `url(${settings.backgroundSettings.panelsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* DesignPanel */
+.design-panel {
+  background-color: v-bind("settings.backgroundSettings.panelsBackground.transparent ? 'transparent' : settings.backgroundSettings.panelsBackground.color") !important;
+  background-image: v-bind("settings.backgroundSettings.panelsBackground.image ? `url(${settings.backgroundSettings.panelsBackground.image})` : 'none'") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* تنظیمات برای حالت موبایل */
+@media (max-width: 768px) {
+
+  .qrcdr-container,
+  .v-container,
+  .v-tabs,
+  .v-sheet,
+  .v-card,
+  .v-form,
+  .preview-panel,
+  .qr-preview,
+  .menu,
+  .navigation,
+  .v-btn {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+/* تنظیمات برای حالت تبلت */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .qrcdr-container,
+  .v-container,
+  .v-tabs,
+  .v-sheet,
+  .v-card,
+  .v-form,
+  .preview-panel,
+  .qr-preview,
+  .menu,
+  .navigation,
+  .v-btn {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+}
